@@ -8,21 +8,21 @@ PHP library to schedule jobs for the NodeJS [Bull Redis queue](https://github.co
 
 ## Installation
 Install via composer:
-`composer require hackthissite/php-bull-scheduler`
+`composer require b4you/bull-scheduler`
 
 ## Usage
-This library operates under the namspace `HackThisSite\BullScheduler` and uses [Predis](https://github.com/nrk/predis) under the hood.
+This library operates under the namspace `B4You\BullScheduler` and uses [Predis](https://github.com/nrk/predis) under the hood.
 ```php
 <?php
 
 require_once 'vendor/autoload.php';
 
-use HackThisSite\BullScheduler\Queue;
+use B4You\BullScheduler\Queue;
 
 // You can specify any value for Redis that Predis considers valid for the first parameter of Predis\Client
-$queue = new Queue('example queue', 'tcp://localhost:6379');
-$queue2 = new Queue('another queue', array('redis' => array('host' => 'localhost', 'port' => 6379)));
-$queue3 = new Queue('different queue', new Predis\Client());
+// $queue = new Queue('example queue', 'tcp://localhost:6379');
+// $queue2 = new Queue('another queue', array('redis' => array('host' => 'localhost', 'port' => 6379)));
+$queue = new Queue('different queue', new Predis\Client(['scheme' => 'tcp', 'host'   => '177.71.152.125', 'port'   => 6379 ]));
 
 $job_id = $queue->add(array('data' => 'value'));
 ```

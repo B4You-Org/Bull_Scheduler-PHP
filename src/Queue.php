@@ -1,15 +1,6 @@
 <?php
 
-/*
- * This file is part of the PHP-Bull-Scheduler package.
- *
- * (c) HackThisSite <staff@hackthissite.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace HackThisSite\BullScheduler;
+namespace B4You\BullScheduler;
 
 use Psr\Log\LoggerAwareTrait;
 use Psr\Log\NullLogger;
@@ -76,7 +67,7 @@ class Queue {
       throw new \RuntimeException(sprintf('Minimum Redis version (%s) not met. Reported Redis version: %s', $this->MINIMUM_REDIS_VERSION, $version));
 
     // Define addJob Lua script
-    $this->redis->getProfile()->defineCommand('addjob', 'HackThisSite\BullScheduler\RedisCommand\AddJob');
+    $this->redis->getProfile()->defineCommand('addjob', 'B4You\BullScheduler\RedisCommand\AddJob');
   }
 
   public function add($name, $data = array(), $opts = array()) {

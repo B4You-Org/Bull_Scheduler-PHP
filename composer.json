@@ -9,8 +9,8 @@
     },
     "authors": [
         {
-            "name": "HackThisSite",
-            "email": "staff@hackthissite.org"
+            "name": "Marcon Willian",
+            "email": "marcon@mh4sh.dev"
         }
     ],
     "require": {
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "HackThisSite\\BullScheduler\\": "src"
+            "B4You\\BullScheduler\\": "src"
         }
     }
 }
