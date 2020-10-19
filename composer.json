@@ -1,11 +1,11 @@
 {
-    "name": "hackthissite/php-bull-scheduler",
+    "name": "b4you/bull-scheduler",
     "description": "PHP library to schedule Redis jobs for the NodeJS Bull Redis queue",
     "type": "library",
     "license": "MIT",
-    "keywords": ["php", "nodejs", "bull", "redis", "queue", "scheduler"],
+    "keywords": ["php"],
     "support": {
-        "issues": "https://github.com/hackthissite/php-bull-scheduler/issues"
+        "issues": "https://github.com/B4You-Org/Bull_Scheduler-PHP/issues"
     },
     "authors": [
         {
